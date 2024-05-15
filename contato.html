@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fila virtual</title>
+  <link rel="stylesheet" href="ctt.css">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <div class="navbar opacity" id="navbar">
+        <div><img src="img/CORAÇAO_AZUL-removebg-preview.png" alt="" style="width: 300px; ;"></div>
+        <div id="icones">
+            <a id="home" href="index.html">Home</a>
+            <a id="sobre" href="tk.html">Sobre</a>
+            <a id="contato" href="contato.html" style="color: #5b97be;">contato</a>
+     
+            
+        </div>
+    </div>
+        <div style="padding-top: 50px;"></div>
+        <section id="contact">
+            <div class="container">
+              <h2>Entre em Contato</h2>
+              <form id="contact-form" action="agradecimento.html">
+                <div class="form-group">
+                  <label for="name">Nome:</label>
+                  <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">E-mail:</label>
+                  <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Telefone:</label>
+                  <input type="tel" id="phone" name="phone" placeholder="Digite seu telefone" required>
+                </div>
+                <div class="form-group">
+                  <label for="message">Mensagem:</label>
+                  <textarea id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
+                </div>
+          
+              <a href="agradecimento.html"> <button id="but">Enviar</button></a>
+              
+              </form>
+            </div>
+          </section>
+
+
+          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+          <script>
+         document.addEventListener("DOMContentLoaded", function() {
+          var projectDetail = document.querySelector(".project-detail");
+          var projectDetailPosition = projectDetail.getBoundingClientRect().top;
+      
+          window.addEventListener("scroll", function() {
+              if (window.scrollY > projectDetailPosition - window.innerHeight / 1.5) {
+                  projectDetail.classList.add("active");
+              }
+          });
+      });
+      
+      document.querySelectorAll('#icones a').forEach(item => {
+          item.addEventListener('click', event => {
+              let linha = document.getElementById('linha');
+              let targetWidth = event.target.offsetWidth;
+              let targetLeft = event.target.offsetLeft;
+      
+              linha.style.width = targetWidth + 'px';
+              linha.style.left = targetLeft + 'px';
+          });
+      });
+      
+      
+          </script>
+</body>
+</html>

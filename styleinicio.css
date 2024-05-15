@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    z-index: 2;
+    background-color: #fff;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 4px 6px;
+    text-decoration: none;
+}
+
+#icones {
+    display: flex;
+    justify-content: space-around;
+    width: 700px;
+    align-items: center;
+    font-size: 20px;
+}
+
+#conteudo1 {
+    height: 800px;
+    background-image: url(img/doctor-6701410_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    background-attachment: fixed;
+    /* Torna a imagem de fundo fixa */
+}
+
+.card {
+    margin-left: 200px;
+    width: 190px;
+    height: 254px;
+    border-radius: 20px;
+    background: #f5f5f5;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+    z-index: 1;
+}
+
+.card-details {
+    color: black;
+    height: 100%;
+    gap: .5em;
+    display: grid;
+    place-content: center;
+}
+
+.card-button {
+    text-align: center;
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #008bf8;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-body {
+    color: rgb(134, 134, 134);
+}
+
+/*Text*/
+.text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: "Noto Sans", sans-serif;
+}
+
+/*Hover*/
+.card:hover {
+    border-color: #008bf8;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+}
+
+#conteudo2 {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#titulo {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+
+
+}
+
+#texto {
+    width: 500px;
+
+    padding-bottom: 100px;
+    text-align: center;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: "Noto Sans", sans-serif;
+    padding-top: 100px;
+}
+
+/* Estilo para a div onde o vídeo será incorporado */
+#fts-container {
+    background: linear-gradient(to right, #4fc3f7, #01579b);
+    padding-top: 50px;
+    /* Reduzir o espaço superior */
+    padding-bottom: 50px;
+    /* Reduzir o espaço inferior */
+    margin-top: 100px;
+    /* Reduzir a margem superior */
+    margin-bottom: 0;
+    /* Remover a margem inferior */
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Definir uma única coluna por padrão */
+    align-items: center;
+    /* Alinha itens verticalmente ao centro */
+}
+
+/* Estilo para o vídeo */
+#fts {
+    width: 90%;
+    /* Reduzir a largura para 90% da tela */
+    height: auto;
+    /* Altura automática para manter a proporção */
+    margin-right: 0;
+    /* Remover a margem direita */
+    margin-bottom: 50px;
+    /* Adicionar margem inferior de 50px */
+}
+
+/* Estilo para a mensagem */
+#mensagem {
+    font-size: 24px;
+    /* Tamanho da fonte da mensagem */
+    color: #fff;
+    /* Cor do texto da mensagem */
+    margin: 50px;
+    /* Adicionar margem de 50px em todas as direções */
+    padding-bottom: 20px;
+    /* Reduzir o espaço inferior */
+}
+
+.underline::after {
+    content: "";
+    display: block;
+    width: 50%;
+    /* Ajuste a largura do traço conforme necessário */
+    height: 2px;
+    /* Ajuste a altura do traço conforme necessário */
+    background-color: black;
+    /* Cor do traço */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 0;
+    /* Remover a margem superior */
+    position: relative;
+    /* Manter o posicionamento relativo */
+    z-index: 1;
+    /* Definir uma z-index maior para sobrepor o conteúdo */
+}
+
+/* Estilo dos links do footer */
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+@media (min-width: 768px) {
+
+    /* Estilos para telas maiores que 767px (PC) */
+    #fts-container {
+        grid-template-columns: 1fr 1fr;
+        /* Dividir em duas colunas */
+    }
+
+    #fts {
+        justify-self: end;
+        /* Alinhar o vídeo à direita */
+        width: 80%;
+        /* Reduzir a largura para 80% da tela */
+        margin-right: 6px;
+        /* Adicionar margem direita de 50px */
+        margin-bottom: 0;
+        /* Remover a margem inferior */
+    }
+
+    #mensagem {
+        justify-self: start;
+        /* Alinhar a mensagem à esquerda */
+        font-size: 24px;
+        /* Manter o tamanho da fonte */
+        margin-left: 150px;
+        /* Adicionar margem esquerda de 50px */
+        margin-bottom: 200px;
+        /* Remover a margem inferior */
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* Estilos para telas menores ou iguais a 767px (Celular) */
+    #fts {
+        width: 100%;
+        /* Ocupar toda a largura disponível */
+        margin-left: 0;
+        /* Remover a margem esquerda */
+    }
+
+    #mensagem {
+        font-size: 20px;
+        /* Reduzir o tamanho da fonte */
+        margin: 20px;
+        /* Adicionar margem em todas as direções */
+    }
+}
+button {
+    --cor-primaria: hsl(0, 0%, 100%);
+    --cor-secundaria: #000000;
+    --cor-hover: #008bf8;
+    --largura-seta: 10px;
+    --traço-seta: 2px;
+    box-sizing: border-box;
+    border: 1px solid #008bf8;
+    border-radius: 20px;
+    color: var(--cor-secundaria);
+    padding: 1em 1.8em;
+    background: var(--cor-primaria);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+    margin-left: 1200px;
+    margin-top: -450px;
+  }
+  
+  button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button .arrow {
+    margin-top: 1px;
+    width: var(--largura-seta);
+    background: var(--cor-primaria);
+    height: var(--traço-seta);
+    position: relative;
+    transition: 0.2s;
+  }
+  
+  button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--cor-secundaria);
+    border-width: 0 var(--traço-seta) var(--traço-seta) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+  }
+  
+  button:hover {
+    background-color: var(--cor-hover);
+  }
+  
+  button:hover .arrow {
+    background: var(--cor-secundaria);
+  }
+  
+  button:hover .arrow:before {
+    right: 0;
+  }
+
+
+
+
